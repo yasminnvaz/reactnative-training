@@ -17,7 +17,7 @@ export default () => {
     activeTintColor: theme.ACTIVE_TEXT_COLOR,
     inactiveTintColor: theme.INACTIVE_TEXT_COLOR,
     style: {
-      backgroundColor: theme.SECONDARY_BACKGROUND_COLOR,
+      backgroundColor: theme.PRIMARY_BACKGROUND_COLOR,
     },
   };
 
