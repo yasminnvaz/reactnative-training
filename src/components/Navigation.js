@@ -2,7 +2,9 @@ import React, {useContext} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeContext} from 'styled-components';
-import Icon from 'react-native-ionicons';
+
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faGlobeAmericas, faDna} from '@fortawesome/free-solid-svg-icons';
 
 import NewsScreen from '../screens/NewsScreen';
 
@@ -21,18 +23,15 @@ export default () => {
 
   const screenOptions = ({route}) => ({
     tabBarIcon: ({color}) => {
-      let iconName;
-
       switch (route.name) {
-        case 'Science':
-          iconName = 'flask-sharp';
-          break;
-        case 'Technology':
-          iconName = 'code-slash-sharp';
-          break;
-      }
+        case 'Science & Technology':
+          return <FontAwesomeIcon icon={faDna} size={20} color={color} />;
 
-      return <Icon name={iconName} size={20} color={color} />;
+        case 'World':
+          return (
+            <FontAwesomeIcon icon={faGlobeAmericas} size={20} color={color} />
+          );
+      }
     },
   });
 
@@ -41,8 +40,8 @@ export default () => {
       <Tab.Navigator
         tabBarOptions={tabBarOptions}
         screenOptions={screenOptions}>
-        <Tab.Screen name="Science" component={NewsScreen} />
-        <Tab.Screen name="Technology" component={NewsScreen} />
+        <Tab.Screen name="Science & Technology" component={NewsScreen} />
+        <Tab.Screen name="World" component={NewsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
