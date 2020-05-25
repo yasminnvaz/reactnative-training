@@ -1,5 +1,5 @@
 {
-  "name": "newyorktimes",
+  "name": "NewYorkTimes",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,8 +13,17 @@
     "lint:fix": "eslint --fix src"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/bottom-tabs": "5.5.0",
+    "@react-navigation/native": "5.4.3",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-gesture-handler": "1.6.1",
+    "react-native-ionicons": "5.0.0-rc",
+    "react-native-reanimated": "1.9.0",
+    "react-native-safe-area-context": "2.0.0",
+    "react-native-screens": "2.8.0",
+    "styled-components": "5.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
