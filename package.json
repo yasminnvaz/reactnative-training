@@ -1,0 +1,43 @@
+{
+  "name": "newyorktimes",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --verbose --watch",
+    "test:coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
+  },
+  "dependencies": {
+    "react": "16.11.0",
+    "react-native": "0.62.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/runtime": "7.9.6",
+    "@react-native-community/eslint-config": "1.1.0",
+    "@testing-library/react-native": "5.0.3",
+    "babel-jest": "26.0.1",
+    "eslint": "7.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "metro-react-native-babel-preset": "0.59.0",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "@testing-library/react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
