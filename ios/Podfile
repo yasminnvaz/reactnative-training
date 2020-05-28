@@ -79,6 +79,8 @@ target 'NewYorkTimes' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'NewYorkTimesTests' do
     inherit! :complete
     # Pods for testing

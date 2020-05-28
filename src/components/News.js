@@ -75,15 +75,19 @@ const parseDate = ({published_date}) => {
 
 const News = ({value}) => {
   return (
-    <NewsContainer>
-      {value.byline === '' && <NewsLiveUptate>Live Updates</NewsLiveUptate>}
+    <NewsContainer testID="news">
+      {value.byline === '' && (
+        <NewsLiveUptate testID="live-news">Live Updates</NewsLiveUptate>
+      )}
       <NewsImage source={{uri: value.multimedia[0].url}} />
       <NewsSourceImage>{value.multimedia[0].copyright}</NewsSourceImage>
-      <NewsTitle>{value.title}</NewsTitle>
+      <NewsTitle testID="title-news">{value.title}</NewsTitle>
 
-      {value.byline !== '' && <NewsSource>{value.byline}</NewsSource>}
+      {value.byline !== '' && (
+        <NewsSource testID="source-news">{value.byline}</NewsSource>
+      )}
 
-      <NewsText>{value.abstract}</NewsText>
+      <NewsText testID="abstract-news">{value.abstract}</NewsText>
       {parseDate(value)}
     </NewsContainer>
   );
